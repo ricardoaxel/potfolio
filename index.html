@@ -8,8 +8,574 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">    
     </head>
     <body>
+        <script>
+
+            window.onload = function() {
+                //Pop-UP
+                document.getElementById('popUp').style.display = 'block'; 
+            };
+            function changeLanguageAndClose(lan){
+                document.getElementById('popUp').style.display = 'none';
+                changeLanguage(lan);
+            }
+            
+
+            function changeLanguage(lan) {
+                switch(lan){
+                    case "ESP":
+                        console.log("Lan: ESP")
+                        document.getElementById("navID").innerHTML = `
+                            <div id="mobileMenu">
+                            <div id="menuToggle">
+                                <input type="checkbox" />
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                <ul id="menu2">
+                                    <li><a href="#container1">Inicio</a></li>
+                                    <li><a href="#container2"> Proyectos</a></li>
+                                    <li><a href="#container3">Experiencia</a></li>
+                                    <li><a href="#container4">Contacto</a></li>
+                                </ul>
+                                
+                            </div>
+                            </div>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="#container1">Inicio</a></li>
+                                        <li><a href="#container2"> Proyectos</a></li>
+                                        <li><a href="#container3">Experiencia</a></li>
+                                        <li><a href="#container4">Contacto</a></li> 
+                                </ul>
+                            </div>
+                            <div id="languaje">LEN: <a onClick="changeLanguage('ENG')">ENG</a>|<a onClick="changeLanguage('ESP')">ESP</a></div>
+                        `;
+                        document.getElementById("prueba").innerHTML = `
+                            Hola! Mi nombre es Axel, soy un Software Engineer, egresado de ESCOM IPN. <br>
+                            Estoy especializado en desarrollo Frontend pero igual me gusta trabajar con cualquier tipo detecnología.
+                        `;
+                        document.getElementById("block1").innerHTML = `
+                            <h2>Habilidades</h2>
+                            <ul>
+                                <li>Diseño Responsivo</li>
+                                <li>Consumo de APIs</li>
+                            </ul>
+                        `;
+                    
+                        document.getElementById("langID").innerHTML = `
+                            Lenguajes & Librerías
+                        `;
+                        document.getElementById("otherTools").innerHTML = `
+                            Otras herramientas
+                        `;
+                        document.getElementById("projectsBlocks").innerHTML = `
+                            <div class="project">
+                                <img src="Images/Projects/Dotzd.jpg"/>
+                                <div class="projDes">
+                                    <h1>Dotzd PressKit</h1>
+                                    <p>
+                                        Presskit online para la banda "Dotzd"   
+                                    <br>
+                                    </p>
+                                    <p> 
+                                    <b>Características:</b>
+                                    Single Page Application, Responsive, Cuenta de visitas y formulario de contacto mediante API's externas, Selección de Idioma
+                                    </p>
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visitar Sitio</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Deposito.jpg"/>
+                                <div class="projDes">
+                                    <h1>Depósito Sonoro</h1>
+                                    <p>
+                                        Blog Musical Online (hecho con Wordpress)
+                                    </p>
+                                    <p> 
+                                    <b>Características:</b>
+                                        Blog, WooCommerce, Responsivo
+                                    </p>    
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>Wordpress</li>
+                                            <li>WooCommerce</li>
+                                            <li>CSS</li>
+                                            <li>Plugins</li>
+
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visitar Sitio</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Potfolio.jpg"/>
+                                <div class="projDes">
+                                    <h1>Portafolio</h1>
+                                    <p>
+                                        Portafolio Online para enseñar mis trabajos más recientes y las tecnologías que se utilizar al momento    
+                                    </p>
+                                    <p> 
+                                    <b>Características:</b>
+                                    Single Page Application, Responsivo, Formulario de contacto por medio de una API externa, Selección de Idioma
+                                    </p>       
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visitar Sitio</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/EchoBravo.jpg"/>
+                                <div class="projDes">
+                                    <h1>Echo Bravo Site</h1>
+                                    <p>
+                                        Página web para mostrar los precios y paquetes de un estudio de audio
+                                    </p>
+                                    <p> 
+                                    <b>Características:</b>
+                                        Single Page Application, Diseño Parallax
+                                    </p>      
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>ReactJS</li>
+                                            <li>HTML</li>
+                                            <li>JavaScript</li>
+                                            <li>CSS</li>
+                                            <li>MaterialUI</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visitar Sitio</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Pedalboard.jpg"/>
+                                <div class="projDes">
+                                    <h1>PB Planner</h1>
+                                    <p>
+                                        Planeador de Pedalbor Online para los guitarristas que desean planear sus pedalboards
+                                    </p>
+                                    <p> 
+                                    <b>Características:</b>
+                                        Drag N Drop, Capacidad de salvar y cargar las pedalboards creadas, Uso de ReDux para el control de estados, MaterialUI para los estilos CSS.
+                                    </p>      
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>ReactJS</li>
+                                            <li>Redux</li>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>MaterialUI</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visitar Sitio</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                        `;
+                        document.getElementById("experienceBlocks").innerHTML = `
+                            <div id="experienceBlocks">
+                                <div id="professionalExp">
+                                    <h1 id="titlesExp">Experiencia Profesional</h1>
+                                    <div class="profCard">
+                                        <h2>Pierre Fabre</h2>
+                                        <p class="fecha"> Feb. 2020 – Ago. 2020 (7 meses) </p>
+                                        <i>Becario Business Intelligence</i>
+                                        <h3>Funciones</h3>
+                                        <p>
+                                            Automatización de procesos mediante la implementación de Macros con código VBA.
+                                            Apoyo en las actividades del área (recopilación, manejo y presentación de la información) con ayuda de
+                                            Excel (Gráficas, fórmulas, tablas dinámicas, dashboards).
+                                        </p>
+                                        <h3>Logros</h3>
+                                        <p>
+                                            Agilización de proceso de generación de Dashboards mediante Macros reduciendo así el tiempo
+                                            de 1 día de trabajo a 1 hora.
+                                        </p>
+                                    </div>
+                                    <div class="profCard">
+                                        <h2>Hábil</h2>
+                                        <p class="fecha"> Ene. 2019 - Jun. 2019 (6 meses)</p>
+                                        <i>Solution Implementation Consultant (Servicio Social)</i>
+                                        <h3>Funciones</h3>
+                                        <p>
+                                            Desarrollo de scripts en NodeJS, uso de tecnologías de AWS y documentación de proyectos.
+                                        </p>
+                                        <h3>Achievements</h3>
+                                        <p>
+                                            Planeación y desarrollo del Conmutador telefónico de la empresa, agregando nuevas
+                                            funcionalidades las cuales permitieron tener un control y registro sobre los datos que los posibles clientes
+                                            ingresan al interactuar con el conmutador para su uso estadístico posterior.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="formation">
+                                    <h1 id="titlesExp2">Educación</h1>
+                                    <div class="formCard">
+                                        <p>Universidad</p>
+                                        <h3>ESCOM IPN <br>Ingeniero en Sistemas Computacionales </h3>
+                                        <p><i>(2015-2020)</i></p>
+                                    </div>
+                                    <div class="formCard">
+                                        <p>Preparatoria</p>
+                                        <h4>CECyT n.9 “Juan de Dios Bátiz” <br>Técnico en Programación </h4>
+                                        <p><i>(2015-2020)</i></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        `;
+                        document.getElementById("container4").innerHTML = `
+                        <div id="mainContact">
+                            <h1>Contact</h1>
+                            <p>
+                                Si quieres ponerte en contacto puedes usar el formulario abajo o enviarme un correo.
+                            </p>
+                            </div>
+                            
+                            <div id="flexcontainerContact">
+                                <div id="contactFormArea">
+                                    <div id="contactFormTitle"><h1>Send a message</h1></div>
+                                    <div id="contactForm">
+                                        <form
+                                            action="https://formspree.io/f/xbjponyb"
+                                            method="POST"
+                                            >
+                                            <label>
+                                                Tu correo:
+                                                <input type="text" name="_replyto">
+                                            </label>
+                                            <label>
+                                                Tu mensaje:
+                                                <textarea name="message"></textarea>
+                                            </label>
+
+                                            <!-- your other form fields go here -->
+
+                                            <button type="submit">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="socialMedia">
+                                    <div id="socialMediaTexts">
+                                        <h1>Socials:</h1>
+                                        <a href="https://open.spotify.com/artist/79GsZllo3AdguIaHUh1u3l" target="_blank"><img class="streamingServices" src="Images/Github.png"/></a>
+                                        <a href="https://music.apple.com/us/artist/dotzd/1108541884" target="_blank"><img class="streamingServices" src="Images/linkedin.png"/></a>
+                                        
+                                        <p>
+                                            Correo: dotzdc@gmail.com (Ashel)
+                                        </p>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div id="webCredits">Sitio desarrollado por @Ashel <a href="https://github.com/ricardoaxel" target="_blank">(https://github.com/ricardoaxel)</a> </div></div>
+                        `;
+                        document.getElementById("otherTools").innerHTML = `
+                            Otras herramientas
+                        `; 
+                    break;
+
+                    case "ENG":
+                        console.log("Lan: ENG")
+                        document.getElementById("navID").innerHTML = `
+                            <div id="mobileMenu">
+                                <div id="menuToggle">
+                                    <input type="checkbox" />
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    <ul id="menu2">
+                                        <li><a href="#container1">About</a></li>
+                                        <li><a href="#container2"> Projects</a></li>
+                                        <li><a href="#container3">Experience</a></li>
+                                        <li><a href="#container4">Contact</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="#container1">About</a></li>
+                                        <li><a href="#container2"> Projects</a></li>
+                                        <li><a href="#container3">Experience</a></li>
+                                        <li><a href="#container4">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div id="languaje">LEN: <a onClick="changeLanguage('ENG')">ENG</a>|<a onClick="changeLanguage('ESP')">ESP</a></div>
+                        `;
+                        document.getElementById("prueba").innerHTML = `
+                            Hi! My name is Axel, im a Software Engineer, graduated from ESCOM IPN. <br>
+                            I'm specialized on Frontend Development but I also love to work with any kind of technology
+                        `;
+                        document.getElementById("block1").innerHTML = `
+                            <h2>Skills</h2>
+                            
+                            <ul>
+                                <li>-Responsive Design</li>
+                                <li>-API consumption</li>
+                            </ul>
+                        `;
+                    
+                        document.getElementById("langID").innerHTML = `
+                            Languages & Libraries
+                        `;
+                        document.getElementById("otherTools").innerHTML = `
+                            Other Tools
+                        `;
+                        document.getElementById("projectsBlocks").innerHTML = `
+                            <div class="project">
+                                <img src="Images/Projects/Dotzd.jpg"/>
+                                <div class="projDes">
+                                    <h1>Dotzd PressKit</h1>
+                                    <p>
+                                        Online Presskit for the band "Dotzd"   
+                                    <br>
+                                    </p>
+                                    <p> 
+                                    <b>Features:</b>
+                                    Single Page Application, Responsive, Visitors count and email contact form with external API's, Language Selection
+                                    </p>
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Deposito.jpg"/>
+                                <div class="projDes">
+                                    <h1>Depósito Sonoro</h1>
+                                    <p>
+                                        Online Music Blog (made with Wordpress)
+                                    </p>
+                                    <p> 
+                                    <b>Features:</b>
+                                        Blog, WooCommerce, Responsive
+                                    </p>    
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>Wordpress</li>
+                                            <li>WooCommerce</li>
+                                            <li>CSS</li>
+                                            <li>Plugins</li>
+
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Potfolio.jpg"/>
+                                <div class="projDes">
+                                    <h1>Portfolio</h1>
+                                    <p>
+                                        Online Porfolio for showing my recent works and the technologies I know at the moment    
+                                    </p>
+                                    <p> 
+                                    <b>Features:</b>
+                                    Single Page Application, Responsive, Email contact from external API, Language Selection
+                                    </p>       
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/EchoBravo.jpg"/>
+                                <div class="projDes">
+                                    <h1>Echo Bravo Site</h1>
+                                    <p>
+                                        Webpage to show the packages and prices from a music studio
+                                    </p>
+                                    <p> 
+                                    <b>Features:</b>
+                                        Single Page Application, Parallax Design, Email contact from external API, Language Selection
+                                    </p>      
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>ReactJS</li>
+                                            <li>HTML</li>
+                                            <li>JavaScript</li>
+                                            <li>CSS</li>
+                                            <li>MaterialUI</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                            <div class="project">
+                                <img src="Images/Projects/Pedalboard.jpg"/>
+                                <div class="projDes">
+                                    <h1>PB Planner</h1>
+                                    <p>
+                                        Web pedalboard planner for guitar players to want to plan their pedalboards
+                                    </p>
+                                    <p> 
+                                    <b>Features:</b>
+                                        Drag N Drop, Capability to save & load created Pedalboards, Use of ReDux for State management, MaterialUI for CSS styles.
+                                    </p>      
+                                </div>
+                                <div class="bottomCard">
+                                        <ul>
+                                            <li>ReactJS</li>
+                                            <li>Redux</li>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>MaterialUI</li>
+                                            
+                                            <li id="github"> <a href="https://github.com/">Github</a></li>
+                                            <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
+                                        </ul>    
+                                </div> 
+                            </div>
+                        `;
+                        document.getElementById("experienceBlocks").innerHTML = `
+                        <div id="experienceBlocks">
+                            <div id="professionalExp">
+                                <h1 id="titlesExp">Professional Experience</h1>
+                                <div class="profCard">
+                                    <h2>Pierre Fabre</h2>
+                                    <p class="fecha"> Feb. 2020 – Aug. 2020 (7 months) </p>
+                                    <i>Business Intelligence Trainee</i>
+                                    <h3>Functions</h3>
+                                    <p>
+                                        Process automation by implementing macros with VBA code. Support in the activities of the area
+                                        (collection, management and presentation of information) with the help of Microsoft Excel (Graphs,
+                                        formulas, pivot tables and dashboards)    
+                                    </p>
+                                    <h3>Achievements</h3>
+                                    <p>
+                                        Automate the Dashboard generation process using VBA macros, thus reducing the time spent
+                                        on this task from 1 days to 1 hour
+                                    </p>
+                                </div>
+                                <div class="profCard">
+                                    <h2>Hábil</h2>
+                                    <p class="fecha"> Jan. 2019 - June. 2019 (6 months)</p>
+                                    <i>Solution Implementation Consultant (Social Service)</i>
+                                    <h3>Functions</h3>
+                                    <p>
+                                        Software development using AWS technologies and NodeJS scripts. Software Documentation
+                                    </p>
+                                    <h3>Achievements</h3>
+                                    <p>
+                                        Planning and development of the company's telephone switch, adding new functionalities
+                                        which allowed more control of the data that potential customers enter while interacting with the telephone
+                                        switch
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="formation">
+                                <h1 id="titlesExp2">Education</h1>
+                                <div class="formCard">
+                                    <p>Superior Education</p>
+                                    <h3>ESCOM IPN <br>Computer systems engineer </h3>
+                                    <p><i>(2015-2020)</i></p>
+                                </div>
+                                <div class="formCard">
+                                    <p>Middle Education</p>
+                                    <h4>CECyT n.9 “Juan de Dios Bátiz” <br>Technician on Programming </h4>
+                                    <p><i>(2015-2020)</i></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        `;
+                        document.getElementById("container4").innerHTML = `
+                            <div id="mainContact">
+                            <h1>Contact</h1>
+                            <p>
+                                    If you want to get on touch with me you can use the form above or send me an email.
+                            </p>
+                            </div>
+                            
+                            <div id="flexcontainerContact">
+                                <div id="contactFormArea">
+                                    <div id="contactFormTitle"><h1>Send a message</h1></div>
+                                    <div id="contactForm">
+                                        <form
+                                            action="https://formspree.io/f/xbjponyb"
+                                            method="POST"
+                                            >
+                                            <label>
+                                                Your e-mail:
+                                                <input type="text" name="_replyto">
+                                            </label>
+                                            <label>
+                                                Your message:
+                                                <textarea name="message"></textarea>
+                                            </label>
+
+                                            <!-- your other form fields go here -->
+
+                                            <button type="submit">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="socialMedia">
+                                    <div id="socialMediaTexts">
+                                        <h1>Socials:</h1>
+                                        <a href="https://open.spotify.com/artist/79GsZllo3AdguIaHUh1u3l" target="_blank"><img class="streamingServices" src="Images/Github.png"/></a>
+                                        <a href="https://music.apple.com/us/artist/dotzd/1108541884" target="_blank"><img class="streamingServices" src="Images/linkedin.png"/></a>
+                                        
+                                        <p>
+                                            E-mail: dotzdc@gmail.com (Ashel)
+                                        </p>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div id="webCredits">Site developed by @Ashel <a href="https://github.com/ricardoaxel" target="_blank">(https://github.com/ricardoaxel)</a> </div></div>
+                        `; 
+                    break;
+                }
+            }
+        </script>
+        
+
         <header>
-            <nav>
+            <nav id="navID">
                 <div id="mobileMenu">
                     <div id="menuToggle">
                         <input type="checkbox" />
@@ -17,20 +583,20 @@
                             <span></span>
                             <span></span>
                         <ul id="menu2">
-                            <li><a href="#container1">Inicio</a></li>
-                            <li><a href="#container2"> Proyectos</a></li>
-                            <li><a href="#container3">Experiencia</a></li>
-                            <li><a href="#container4">Contacto</a></li>
+                            <li><a href="#container1">About</a></li>
+                            <li><a href="#container2"> Projects</a></li>
+                            <li><a href="#container3">Experience</a></li>
+                            <li><a href="#container4">Contact</a></li>
                         </ul>
                         
                     </div>
                 </div>
                 <div id="menu">
                     <ul>
-                        <li><a href="#container1">Inicio</a></li>
-                        <li><a href="#container2"> Proyectos</a></li>
-                        <li><a href="#container3">Experiencia</a></li>
-                        <li><a href="#container4">Contacto</a></li>
+                        <li><a href="#container1">About</a></li>
+                            <li><a href="#container2"> Projects</a></li>
+                            <li><a href="#container3">Experience</a></li>
+                            <li><a href="#container4">Contact</a></li>
                     </ul>
                 </div>
                 <div id="languaje">LEN: <a onClick="changeLanguage('ENG')">ENG</a>|<a onClick="changeLanguage('ESP')">ESP</a></div>
@@ -59,7 +625,7 @@
                        
                         </div>
                         <div id="block2" class="box">
-                            <h2 style="text-align:center;">Languages & Libraries</h2>
+                            <h2 id="langID" style="text-align:center;">Languages & Libraries</h2>
                             <div id="languagesContainer">
                                 <table class="tableLanguages">
                                     <tr>
@@ -101,7 +667,7 @@
                                          
                         </div>
                         <div id="block3" class="box">
-                            <h2>Other Tools</h2>
+                            <h2 id="otherTools">Other Tools</h2>
 
                             <div id="toolsContainer">
                                 <table class="tableTools">
@@ -149,12 +715,12 @@
                         <div class="projDes">
                             <h1>Dotzd PressKit</h1>
                             <p>
-                                Single Page Application, done only with HTML, CSS & JavaScript. Online Presskit for the band "Dotzd"   
+                                Online Presskit for the band "Dotzd"   
                             <br>
                             </p>
                             <p> 
                             <b>Features:</b>
-                                Responsive, Visitors count and email contact form with external API's, Multiple Languages.
+                            Single Page Application, Responsive, Visitors count and email contact form with external API's, Language Selection
                             </p>
                         </div>
                         <div class="bottomCard">
@@ -163,92 +729,106 @@
                                     <li>CSS</li>
                                     <li>JavaScript</li>
                                     
-                                    <li>Github</li>
-                                    <li>Visit Site</li>   
+                                    <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                    <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
                                 </ul>    
                         </div> 
                     </div>
                     <div class="project">
                         <img src="Images/Projects/Deposito.jpg"/>
                         <div class="projDes">
-                            <h1>Proyecto 1</h1>
+                            <h1>Depósito Sonoro</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sit nam omnis molestias animi iure saepe quaerat, quia accusamus dolorem in facere provident reiciendis quo excepturi debitis libero? Et, perspiciatis!   
-                            </p>     
+                                Online Music Blog (made with Wordpress)
+                            </p>
+                            <p> 
+                            <b>Features:</b>
+                                Blog, WooCommerce, Responsive
+                            </p>    
                         </div>
                         <div class="bottomCard">
                                 <ul>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>Github</li>
-                                    <li>Visit Site</li>   
+                                    <li>Wordpress</li>
+                                    <li>WooCommerce</li>
+                                    <li>CSS</li>
+                                    <li>Plugins</li>
+
+                                    <li id="github"> <a href="https://github.com/">Github</a></li>
+                                    <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
                                 </ul>    
                         </div> 
                     </div>
                     <div class="project">
                         <img src="Images/Projects/Potfolio.jpg"/>
                         <div class="projDes">
-                            <h1>Proyecto 1</h1>
+                            <h1>Portfolio</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sit nam omnis molestias animi iure saepe quaerat, quia accusamus dolorem in facere provident reiciendis quo excepturi debitis libero? Et, perspiciatis!   
-                            </p>     
+                                Online Porfolio for showing my recent works and the technologies I know at the moment    
+                            </p>
+                            <p> 
+                            <b>Features:</b>
+                            Single Page Application, Responsive, Email contact from external API, Language Selection
+                            </p>       
                         </div>
                         <div class="bottomCard">
                                 <ul>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>Github</li>
-                                    <li>Visit Site</li>   
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    
+                                    <li id="github"> <a href="https://github.com/">Github</a></li>
+                                    <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
                                 </ul>    
                         </div> 
                     </div>
                     <div class="project">
                         <img src="Images/Projects/EchoBravo.jpg"/>
                         <div class="projDes">
-                            <h1>Proyecto 1</h1>
+                            <h1>Echo Bravo Site</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sit nam omnis molestias animi iure saepe quaerat, quia accusamus dolorem in facere provident reiciendis quo excepturi debitis libero? Et, perspiciatis!   
-                            </p>     
+                                Webpage to show the packages and prices from a music studio
+                            </p>
+                            <p> 
+                            <b>Features:</b>
+                                Single Page Application, Parallax Design, Email contact from external API, Language Selection
+                            </p>      
                         </div>
                         <div class="bottomCard">
                                 <ul>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>Github</li>
-                                    <li>Visit Site</li>   
+                                    <li>ReactJS</li>
+                                    <li>HTML</li>
+                                    <li>JavaScript</li>
+                                    <li>CSS</li>
+                                    <li>MaterialUI</li>
+                                    
+                                    <li id="github"> <a href="https://github.com/">GitHub</a></li>
+                                    <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
                                 </ul>    
                         </div> 
                     </div>
                     <div class="project">
                         <img src="Images/Projects/Pedalboard.jpg"/>
                         <div class="projDes">
-                            <h1>Proyecto 1</h1>
+                            <h1>PB Planner</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sit nam omnis molestias animi iure saepe quaerat, quia accusamus dolorem in facere provident reiciendis quo excepturi debitis libero? Et, perspiciatis!   
-                            </p>     
+                                Web pedalboard planner for guitar players to want to plan their pedalboards
+                            </p>
+                            <p> 
+                            <b>Features:</b>
+                                Drag N Drop, Capability to save & load created Pedalboards, Use of ReDux for State management, MaterialUI for CSS styles.
+                            </p>      
                         </div>
                         <div class="bottomCard">
                                 <ul>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>c++</li>
-                                    <li>Github</li>
-                                    <li>Visit Site</li>   
+                                    <li>ReactJS</li>
+                                    <li>Redux</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>MaterialUI</li>
+                                    
+                                    <li id="github"> <a href="https://github.com/">Github</a></li>
+                                    <li id="visitSite"><a href="https://github.com/"><b>Visit Site</b></a></li>   
                                 </ul>    
                         </div> 
                     </div>
@@ -435,89 +1015,85 @@
             <section id="container3" class="fullHeight">
                 <div id="experienceBlocks">
                     <div id="professionalExp">
-                        <h1 id="titlesExp">Experiencia Profesional</h1>
+                        <h1 id="titlesExp">Professional Experience</h1>
                         <div class="profCard">
                             <h2>Pierre Fabre</h2>
-                            <p class="fecha"> 12 adas /12 sdd 3</p>
+                            <p class="fecha"> Feb. 2020 – Aug. 2020 (7 months) </p>
+                            <i>Business Intelligence Trainee</i>
                             <h3>Functions</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae aliquid nobis architecto, hic, at quibusdam reprehenderit cumque recusandae nam doloremque! Vero quos alias, at quo hic minima voluptatibus expedita!
+                                Process automation by implementing macros with VBA code. Support in the activities of the area
+                                (collection, management and presentation of information) with the help of Microsoft Excel (Graphs,
+                                formulas, pivot tables and dashboards)    
                             </p>
                             <h3>Achievements</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste facilis exercitationem, alias in sequi omnis corrupti officia nobis placeat, quasi consequatur quibusdam est unde nihil commodi corporis numquam aut. Ab.
+                                Automate the Dashboard generation process using VBA macros, thus reducing the time spent
+                                on this task from 1 days to 1 hour
                             </p>
                         </div>
                         <div class="profCard">
                             <h2>Hábil</h2>
-                            <p class="fecha"> 12 adas /12 sdd 3</p>
+                            <p class="fecha"> Jan. 2019 - June. 2019 (6 months)</p>
+                            <i>Solution Implementation Consultant (Social Service)</i>
                             <h3>Functions</h3>
                             <p>
-                                trasdsadas
+                                Software development using AWS technologies and NodeJS scripts. Software Documentation
                             </p>
                             <h3>Achievements</h3>
                             <p>
-                                trasdsadas
+                                Planning and development of the company's telephone switch, adding new functionalities
+                                which allowed more control of the data that potential customers enter while interacting with the telephone
+                                switch
                             </p>
                         </div>
                     </div>
 
                     <div id="formation">
-                        <h1 id="titlesExp2">Formación Académica</h1>
+                        <h1 id="titlesExp2">Education</h1>
                         <div class="formCard">
-                            <h2>Pierre Fabre</h2>
-                            <p class="fecha"> 12 adas /12 sdd 3</p>
-                            <h3>Functions</h3>
-                            <p>
-                                Lorem ipsum dolora!orem ipsum dolora!orem ipsum dolora!orem ipsum dolora!orem ipsum dolora!
-                            </p>
-                            
+                            <p>Superior Education</p>
+                            <h3>ESCOM IPN <br>Computer systems engineer </h3>
+                            <p><i>(2015-2020)</i></p>
                         </div>
                         <div class="formCard">
-                            <h2>Pierre Fabre</h2>
-                            <p class="fecha"> 12 adas /12 sdd 3</p>
-                            <h3>Functions</h3>
-                            <p>
-                                trasdsadas
-                            </p>
-                            <h3>Achievements</h3>
-                            <p>
-                                trasdsadas
-                            </p>
+                            <p>Middle Education</p>
+                            <h4>CECyT n.9 “Juan de Dios Bátiz” <br>Technician on Programming </h4>
+                            <p><i>(2015-2020)</i></p>
                         </div>
                         
                     </div>
                 </div>
             </section>
-            <section id="container4" class="fullHeight">
+            <section id="container4">
 
                 <div id="mainContact">
-                  <h1>Contacto</h1>
+                  <h1>Contact</h1>
                   <p>
-                      Para entrevistas, presentaciones o más información de la banda puedes contactarme por medio de los siguientes medios.
+                        If you want to get on touch with me you can use the form above or send me an email.
                   </p>
                 </div>
                 
                 <div id="flexcontainerContact">
                     <div id="contactFormArea">
-                        <div id="contactFormTitle"><h1>Envía un mensaje</h1></div>
+                        <div id="contactFormTitle"><h1>Send a message</h1></div>
                         <div id="contactForm">
                             <form
                                 action="https://formspree.io/f/xbjponyb"
                                 method="POST"
                                 >
                                 <label>
-                                    Tú correo:
+                                    Your e-mail:
                                     <input type="text" name="_replyto">
                                 </label>
                                 <label>
-                                    Tú mensaje:
+                                    Your message:
                                     <textarea name="message"></textarea>
                                 </label>
 
                                 <!-- your other form fields go here -->
 
-                                <button type="submit">Enviar</button>
+                                <button type="submit">Send</button>
                             </form>
                         </div>
                     </div>
@@ -528,7 +1104,7 @@
                             <a href="https://music.apple.com/us/artist/dotzd/1108541884" target="_blank"><img class="streamingServices" src="Images/linkedin.png"/></a>
                             
                             <p>
-                                Correo: dotzdc@gmail.com (Ashel)
+                                E-mail: dotzdc@gmail.com (Ashel)
                             </p>
 
                         </div>
@@ -538,6 +1114,21 @@
                 <div id="webCredits">Site developed by @Ashel <a href="https://github.com/ricardoaxel" target="_blank">(https://github.com/ricardoaxel)</a> </div></div>
                 
             </section>
+        </div>
+
+        <div id="popUp">
+            <div id="popContent">
+                <div id="popUpTitles">
+                    <h2>
+                        Ricardo Axel Portfolio 
+                    </h2>
+                    Select a language / Selecciona un idioma
+                </div>
+                <p>
+                    <a onclick="changeLanguageAndClose('ENG')">English /</a> 
+                    <a onclick="changeLanguageAndClose('ESP')">Español </a>
+                </p>
+            </div>
         </div>
     </body>
 </html>
