@@ -38,7 +38,7 @@
         
         /* Track */
         ::-webkit-scrollbar-track {
-            background: #f1f1f1; 
+            background: #e4e8f8; 
         }
         
         /* Handle */
@@ -177,7 +177,7 @@
             transition: .3s; 
         }
         #menu ul li a:hover{
-
+            color: rgb(137, 156, 184);
             border-bottom:1px solid #ffffff; ;
             font-size: 1.5rem;
         }
@@ -190,14 +190,14 @@
             right:  6rem;
             top: 1.7rem;   
             z-index:10000000000;
-            cursor: default;
+            cursor: pointer;
         }
         #languaje a{
             color: rgb(28, 26, 32);
             z-index:10000000000;
         }
         #languaje a:hover{
-            color: rgb(232, 230, 235);
+            color: rgb(163, 174, 224);
         }
         
         /*Change of menu to mobile menu*/
@@ -240,7 +240,7 @@
         border-radius: 20rem;
     }
     #tecnologiesBlocks{
-        margin-top:7rem;
+        margin-top:5rem;
         margin-left: 12rem;
         margin-right: 12rem;
         border-radius: 1rem;
@@ -259,7 +259,8 @@
         border-radius: .5rem;
         transition: .5s;
         height: auto;
-        margin: .5rem;
+        margin: .7rem;
+        margin-top: 0rem;
         padding-bottom: 1rem;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -275,6 +276,7 @@
 
     .box h2{
         color: rgb(5, 0, 34);
+        margin-top: .2rem;
 
     }
     .box p{
@@ -283,10 +285,20 @@
         padding-right: 2rem;
         border-right-color: coral;
     }
-
     #block2{
+        padding: 1rem;
+    }
+    #block2:hover #block2Text{
+        background-color: rgb(216, 220, 238);
+    }
+
+    #block2Text{
         text-align:left;
-        
+        padding:0rem;
+        margin:0rem;
+    }
+    #imageBlock2{
+        text-align: center;
     }
     #languagesContainer{  
         justify-content: center;    
@@ -317,6 +329,13 @@
    
     #backend{
         margin-right: 0rem;
+    }
+
+    .blocksImg{
+        text-align: center;
+        width: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
     }
     
 
@@ -361,7 +380,7 @@
 
 
     @media (max-width:1149px){
-        #block2{
+        #block2Text{
             order:1;
             width:85%;
         }
@@ -395,7 +414,7 @@
     }
     @media (max-width:477px){
 
-        #block2{
+        #block2Text{
             padding-left: 0rem;
             padding-right: 0rem;
         }
@@ -724,6 +743,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
     #professionalExp{
         margin: 2rem;
+        margin-top: 4rem;
         padding: 1rem;
         flex: 0 0 45%;
         position: relative;
@@ -734,6 +754,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         -moz-box-shadow: 0px 1px 14px -3px rgba(0,0,0,0.36);
         box-shadow: 0px 1px 14px -3px rgba(0,0,0,0.36);
         border-radius:.3rem;
+    }
+    #profExpImg{
+        position: absolute;
+        top: 2.35rem;
+        right: 1.5rem;
+        width: 2.7rem;
     }
     #titlesExp{
         text-align: center;
@@ -752,6 +778,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     #formation{
         margin: 2rem;
+        margin-top: 0rem;
         padding: 1rem;
         flex: 0 0 20%;
         position: relative;
@@ -764,7 +791,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         -moz-box-shadow: 0px 1px 14px -3px rgba(0,0,0,0.36);
         box-shadow: 0px 1px 14px -3px rgba(0,0,0,0.36);
         border-radius:.3rem;
-         margin-top: 1rem;
     }
     .formCard{
         border-bottom: 1px solid rgb(187, 187, 197);
@@ -776,11 +802,55 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     #professionalExp:hover{
         background-color: #cacfe2;
     }
+    #educationImg{
+        position: absolute;
+        top: 1.7rem;
+        right: 1rem;
+        width: 2.7rem;
+    }
+
+    @media(max-width:1500px){
+        #professionalExp{
+            margin: 2rem;
+            margin-top: .6rem;
+        }
+    }
+    @media(max-width:1128px){
+        #experienceBlocks{
+            
+         
+            align-items: flex-start
+        }
+            
+        #professionalExp{
+            margin: 2rem;
+            margin-top: .6rem;
+        }
+        #profExpImg{
+            position: relative;
+            left: 45%;
+            width: 2rem;
+            margin-top: 0rem;
+            padding-top: 0rem;
+            margin-bottom: 1rem;
+        }
+        #educationImg{
+            position: relative;
+            right: 40%;
+            width: 2.6rem;
+            margin-top: 0rem;
+            padding-top: 0rem;
+            margin-bottom: 1rem;
+        }
+        #formation{
+            margin-top: 1rem;
+        }
+    }
 
     
     @media (max-width:1700px){
         #experienceBlocks{
-            padding-top:2.5rem;
+            padding-top:1.5rem;
             padding-bottom:2rem;
         }
     }
@@ -824,6 +894,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         background-color: #0E091B;
         text-align: center;
         height: 100%;
+    }
+
+    #contactImg{
+        width: 3rem;
     }
     #mainContact h1{
         margin-top:0px;
@@ -1001,7 +1075,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         padding:.5rem;
         font-size: .8rem;
         color: rgba(212, 223, 243, 0.856);
-        background-color: rgba(24, 25, 36, 0.925);
+        background-color: rgba(20, 21, 39, 0.925);
     }
     
     #webCredits a{
@@ -1017,6 +1091,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             font-weight: 900;
             padding-top: 5rem;
         }
+        #contactImg{
+            width: 2.2rem;
+        }
     }
 
 /* POP UP CLASSES */
@@ -1028,7 +1105,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     left:0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 12, 11, 0.897);
+    background-color: rgba(231, 231, 238, 0.897);
     text-align: center;
     transition: .5s;
     display: none;
@@ -1040,8 +1117,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     z-index: 10000000000001;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.836);
-    margin: 10rem;
-    margin-top: 11vh;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    height: auto;
     padding: 2rem;
     -webkit-box-shadow: 0px 2px 71px -1px rgba(255,255,255,0.31);
     -moz-box-shadow: 0px 2px 71px -1px rgba(255,255,255,0.31);
@@ -1049,8 +1128,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 }
 
-#popUpImage{
-    width: 25rem;
+#popContent img{
+    width: 10rem;
+    border-radius: 8rem;
+    transition: .5s;
     padding-bottom: 1rem;
 }
 
@@ -1068,13 +1149,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 #popContent a{
     font-weight: 600;
     font-size: 2rem;
-    color: rgb(165, 76, 187);
+    color: rgb(139, 162, 238);
     text-decoration: none; /* no underline */
     transition: .3s;
+    cursor: pointer;
 }
 
 #popContent a:hover{
-    color: rgb(211, 187, 218);
+    color: rgb(215, 224, 240);
 }
 
 #popContent a:active{
@@ -1099,7 +1181,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 @media (max-width:800px){
     #popContent{
         margin: 1rem;
-        margin-top: 30vh;
+        margin-top: 25vh;
         padding: 1rem;
     }
     #getOutPop{
