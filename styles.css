@@ -337,6 +337,13 @@
         margin-top: 1rem;
         margin-bottom: 0rem;
     }
+
+    #block1{
+        width:15%
+    }
+    #block3{
+        width:15%
+    }
     
 
     @media (max-width:1640px){
@@ -382,19 +389,31 @@
     @media (max-width:1149px){
         #block2Text{
             order:1;
-            width:85%;
+            width:100%;
         }
         #block1{
             order:2;
-            width:38%
+            width:38%;
+            height: 14.5rem;
         }
         #block3{
             order:2;
-            width:38%
+            width:87.5%
         }
     }
 
-    @media (max-width:960px){
+    @media (max-width:1015px){
+        #block1{
+            order:2;
+            width:80%;
+            height: auto;
+        }
+        #block2{
+            width:84%;
+        }
+        #block3{
+            width:80%;
+        }
 
         #description{
             padding: 2rem;
@@ -503,7 +522,7 @@
     #projectsBlocks{    
         padding-right: 20rem;
         padding-left: 20rem;
-        padding-top: 0rem;
+        padding-top: 2rem;
         padding-bottom: 3rem;
         height: 100%;
         justify-content: center;
@@ -635,7 +654,7 @@
         #projectsBlocks{
             padding-right: 5rem;
             padding-left: 5rem;
-            padding-top: 0rem;
+            padding-top: 2rem;
         }
         
         #container2{
